@@ -1,0 +1,17 @@
+h1 {
+  color: red;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+h3 {
+  color: blue;
+  text-align: left;
+  font-family: Georgia,serif;
+}
+
+p {
+  color: black;
+  text-align: justify;
+  font-family: Georgia, serif;
+}
