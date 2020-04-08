@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>AWS S3</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      </head>
+      <body>
+            <div class="container-fluid">
+
+                <h1>AWS S3 (Simple Storage Service)</h1>
+
+                <h2>What is AWS S3?</h2>
+
+                <p>AWS S3 is an object (file) level storage service which can be used to save general purpose data on the cloud and access it from anywhere.
+                It can be seen as a NAS (Network Attached Storage) in an on-premise network. General features of AWS S3 are the following:</p>
+
+                <ul>
+                  <li>Data is distributed across at least three AZs with the exception of 1A class S3 services where the data is kept in one AZ only, which
+                    makes it a cheaper solution.
+                  </li>
+                  <li>It supports encryption.</li>
+                  <li>Provides automatic data classification. For example if data is not manipulated in any way during a certain period of time, it can be
+                    automatically moved to AWS Glacier for long term storage.</li>
+                  <li>Useful for big data analytics.</li>
+                </ul>
+
+                <h2>Some AWS S3 concepts...</h2>
+
+                <h3>Objects</h3>
+                <p>AWS names files as objects. Each object is identified through an URL (Uniform Resource Locator) from which the object can be accessed.
+                  The following graph shows the structure of an object URI.</p
+
+            </div>
+
+            <div class="container-fluid">
+                  <img src="./images/ObjectAWS_S3.png">
+            </div>
+
+            <div class="container-fluid">
+
+                <h3>Buckets</h3>
+                <p>Buckets are basically containers to store the objects.</p>
+
+                <h2>How to get data into S3?</h2>
+
+                <p>There are different ways of getting data into S3 as follows:<p>
+
+                <ul>
+                  <li>Uploading the files manually to an S3 bucket from your local desktop like the way you do with a storage cloud service like google drive
+                    or dropbox.</li>
+                  <li>Files can be uploaded through an API (Application Programming Interface).</li>
+                  <li>Amazon Direct Connect can be used to upload files through a VPN.</li>
+                  <li>An Storage Gateway can also be used to synchronize local data into AWS S3.</li>
+                  <li>Through Kinesis Firehose?</li>
+                  <li>Transfer acceleration and optimized data access can be done through AWS cloud front.</li>
+                </ul>
+
+            </div>
+     </body>
+</html>
