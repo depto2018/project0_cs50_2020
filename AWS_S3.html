@@ -15,20 +15,20 @@
                 It can be seen as a NAS (Network Attached Storage) in an on-premise network. General features of AWS S3 are the following:</p>
 
                 <ul>
-                  <li>Data is distributed across at least three AZs with the exception of 1A class S3 services where the data is kept in one AZ only, which
-                    makes it a cheaper solution.
-                  </li>
-                  <li>It supports encryption.</li>
-                  <li>Provides automatic data classification. For example if data is not manipulated in any way during a certain period of time, it can be
+                    <li>Data is distributed across at least three AZs with the exception of 1A class S3 services where the data is kept in one AZ only, which
+                    makes it a cheaper solution.</li>
+                    <li>It supports encryption.</li>
+                    <li>Provides automatic data classification. For example if data is not manipulated in any way during a certain period of time, it can be
                     automatically moved to AWS Glacier for long term storage.</li>
-                  <li>Useful for big data analytics.</li>
+                    <li>Useful for big data analytics.</li>
                 </ul>
 
                 <h2>Some AWS S3 concepts...</h2>
 
                 <h3>Objects</h3>
+
                 <p>AWS names files as objects. Each object is identified through an URL (Uniform Resource Locator) from which the object can be accessed.
-                  The following graph shows the structure of an object URI.</p
+                  The following graph shows the structure of an object URL.</p
 
             </div>
 
@@ -38,21 +38,61 @@
 
             <div class="container-fluid">
 
+                <p>Objects in S3 have eventual consistency, which means that anytime an object is modified it will get replicated in all AZs but it might
+                  take some time as a difference with AWS EBS where objects are consistent.</p>
+
                 <h3>Buckets</h3>
+
                 <p>Buckets are basically containers to store the objects.</p>
 
-                <h2>How to get data into S3?</h2>
+                <h3>REST</h3>
+
+                <p>S3 is based on REST (Representational State Transfer) which is a system interface that maps HTTP methods to CRUD operations:</p>
+
+                <ul>
+                    <li><strong>C</strong>reate &#8594; Put or Post operation.</li>
+                    <li><strong>R</strong>ead &#8594; Get operation.</li>
+                    <li><strong>U</strong>pdate &#8594; Post or Put operation.</li>
+                    <li><strong>D</strong>elete &#8594; Delete operation.</li>
+                </ul>
+
+                <p><strong>Note:</strong> It is more common to use Put operation for create actions and Post for updates, but they can interchanged.</p>
+
+                <h2>How to put data into S3?</h2>
 
                 <p>There are different ways of getting data into S3 as follows:<p>
 
                 <ul>
-                  <li>Uploading the files manually to an S3 bucket from your local desktop like the way you do with a storage cloud service like google drive
+                    <li>Uploading the files manually to an S3 bucket from your local desktop like the way you do with a storage cloud service like google drive
                     or dropbox.</li>
-                  <li>Files can be uploaded through an API (Application Programming Interface).</li>
-                  <li>Amazon Direct Connect can be used to upload files through a VPN.</li>
-                  <li>An Storage Gateway can also be used to synchronize local data into AWS S3.</li>
-                  <li>Through Kinesis Firehose?</li>
-                  <li>Transfer acceleration and optimized data access can be done through AWS cloud front.</li>
+                    <li>Files can be uploaded through an API (Application Programming Interface).</li>
+                    <li>Amazon Direct Connect can be used to upload files through a VPN.</li>
+                    <li>An Storage Gateway can also be used to synchronize local data into AWS S3.</li>
+                    <li>Through Kinesis Firehose?</li>
+                    <li>Transfer acceleration and optimized data access can be done through AWS cloud front.</li>
+                </ul>
+
+                <h2>S3 storage classes</h2>
+
+                <p>There are different types of storage classes which will offer more or less benefits but with a cost effect. Main classes are the following:</p>
+
+                <ul>
+                    <li><strong>Standard:</strong> This is the most expensive.</li>
+                    <li><strong>Infrequent access storage (IA):</strong></li>
+                    <li><strong>Reduced redundancy storage (RRS):</strong></li>
+                    <li><strong>Glacier:</strong> This is the less expensive one.</li>
+                </ul>
+
+                <p>Data can be moved from standard to either IA or Glacier based on time policies known as Object Lifecycle Management.</p>
+
+                <h2>Some S3 facts...</h2>
+
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Bucket names must be globally unique.</li>
+                    <li class="list-group-item list-group-item-secondary">Objects versioning can be suspended but not Disabled.</li>
+                    <li class="list-group-item list-group-item-info">Objects inherit permissions from the bucket's but they can be overwritten at the object level.</li>
+                    <li class="list-group-item list-group-item-warning">Tags are used to search, organize and manage object access. An object can have up to 10 tags.</li>
+                    <li class="list-group-item list-group-item-primary">When you delete an object, it is only marked for deletion at first time so you can recover it. They get completed deleted after...</li>
                 </ul>
 
             </div>
