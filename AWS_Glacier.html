@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Amazon S3 Glacier</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <style>
+                .row > div {
+                    padding: 20px;
+                    font-size: 12px;
+                }
+            </style>
+      </head>
+      <body>
+            <div class="container-fluid pt-12 my-3 bg-dark text-white">
+
+                    <h1 class="text-center">AWS Glacier</h1>
+
+            </div>
+
+            <div class="container">
+
+              <p class="text-justify">Amazon S3 Glacier and Glacier Deep Archive are a secure, durable and a low cost cloud solution for data archiving and
+                long-term backup. It means data that does not need to be accessed every day. It costs around &#36;1 per terabyte per month.
+           </div>
+
+           <div class="container-fluid bg-light">
+              <div class="container">
+                <div class="row">
+                      <div class="col-sm-4">
+                              <h5 class="text-danger">Retrieval methods</h5>
+                              <p class="text-justify"><strong><u>Expedited retrievals</u></strong> return data in 1-5 minutes, great for Archive use cases.
+                                <strong><u>Standard retrievals</u></strong> completed between 3-5 hours, and work well for less sensitive data like backups data,
+                                media editing, long-term analytics. <strong><u>Bulk retrievals</u></strong> are the lowest method returning large ammount of data
+                                between 5-12 hours. Amazon S3 Glacier deep archive provides two retrievla options ranging from 12 to 48 hours.</p>
+                     </div>
+
+                     <div class="col-sm-4">
+                              <h5 class="text-danger">Durability and Scalability</h5>
+                              <p class="text-justify">Amazon S3 Glacier and Glacier Deep Archive are designed for 99.999999999% of durability. Data is automatically
+                                distributed across a minimum of 3 AZs that are geographically separated within an AWS Region.</p>
+                    </div>
+
+                    <div class="col-sm-4">
+                             <h5 class="text-danger">Security and Compliance</h5>
+                             <p class="text-justify">AWS Glacier storage classes sopport three different forms of encryption. These storage classes also
+                               support security standards and compliance certifications including SEC Rule 17a-4, PCI-DSS, HIPAA/HITECH, FedRAMP, EU GDPR,
+                               and FISMA, and Amazon S3 Object Lock enables WORM storage capabilities, helping satisfy compliance requirements for virtually
+                               every regulatory agency around the globe.</p>
+                   </div>
+              </div>
+
+              <div class="row">
+                    <div class="col-sm-4">
+                            <h5 class="text-danger">Archives</h5>
+                            <p class="text-justify">Data in AWS Glacier is stored in archives which would be an object in AWS S3. An archive can be any kind
+                              of file (it can be tar or zip) as large as 40 terabytes. The content of an arcchive is inmmutable, which means after the archive
+                              is created it can not be updated. You can store an unlimited ammount of data in Glacier.</p>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <h5 class="text-danger">Vaults</h5>
+                            <p class="text-justify">Vaults are the containers to store the archives. It can be seen as the buckets for AWS S3. You can perform
+                              a variety of operations from the management console or SDKs like create a vault, delete vault, lock vault,list vault metadata,
+                              retrieve vault inventory, tag vaults and configure vault notifications. Under a single AWS account, you can have up to 1,000 vaults.</p>
+                   </div>
+
+                   <div class="col-sm-4">
+                           <h5 class="text-danger">Amazon S3 Glacier select</h5>
+                           <p class="text-justify">Amazon S3 Glacier Select allows queries to run directly on data stored in Amazon S3 Glacier without having
+                             to retreive the entire archive. Amazon S3 Glacier Select changes the value of archive storage by allowing you to process and find
+                             only the bytes you need out of the archive to use for analytics.</p>
+                  </div>
+              </div>
+
+              <div class="row">
+                    <div class="col-sm-4">
+                            <h5 class="text-danger">Amazon Snowball and Diect Connect</h5>
+                            <p class="text-justify">Amazon Snobball and Direct connection are two methods you can use to migrate or send your data from
+                            your on-premises network to the cloud in a fast and secure way.</p>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <h5 class="text-danger">Vault Lock</h5>
+                            <p class="text-justify">Amazon S3 Glacier Vault Lock allows you to easily deploy and enforce compliance controls on individual
+                               S3 Glacier vaults via a lockable policy. You can specify controls such as “Write Once Read Many” (WORM) in a Vault Lock policy
+                               and lock the policy from future edits.</p>
+                   </div>
+
+                   <div class="col-sm-4">
+                           <h5 class="text-danger">Encryption by default</h5>
+                           <p class="text-justify">Amazon S3 Glacier automatically encrypts data at rest using Advanced Encryption Standard (AES) 256-bit
+                             symmetric keys and supports secure transfer of your data over Secure Sockets Layer (SSL).</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+              <p>If you would like to know additional details can be found on the following AWS website:<a href="https://aws.amazon.com/glacier/features/?nc=sn&loc=2"><u>AWS Glacier</u></a></p>
+              <p class="text-right"><a href="index.html"><u>Return to main page</u></p>
+          </div>
+                  
+      </body>
+</html>

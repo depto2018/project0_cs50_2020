@@ -27,6 +27,7 @@
            </div>
 
            <div class="container">
+             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
                        <tr>
@@ -35,6 +36,7 @@
                           <th colspan="2" class="text-center">Hard Disk Drives (HDD)</th>
                       </tr>
                    </thead>
+                   <tbody>
                       <tr>
                           <td scope="col">Volume Type</td>
                           <td scope="col">EBS Provisioned IOPS SSD (io1)</td>
@@ -112,7 +114,12 @@
                           <td scope="col">MB/s</td>
                           <td scope="col">MB/s</td>
                       </tr>
+                  </tbody>
                 </table>
+              </div>
+            </div>
+
+            <div class="container">
 
                 <p class="font-italic">IOPS: Input/output Operations per Second</p>
                 <p class="font-italic">General Purpose SSD (gp2) is the default volume for EC2 instances.</p>
@@ -126,6 +133,7 @@
                     no downtime or impact.</li>
                     <li>EBS volumes and snpashots can be encrypted with general or user created keys.</li>
                     <li>Amazon EBS Multi-Attach allows an EBS io1 volume to be attached concurrently to up to 16 Nitro-based EC2 insatnces within the same AZ.</li>
+                    <li>EC2 instances and EBS volumes need to be on the same AZ.</li>
                </ul>
 
                <p>AWS provides a bunch of features in regards to the way snapshots can be used and managed, for additonal details about it please visit the
