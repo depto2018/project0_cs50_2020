@@ -1,3 +1,35 @@
+@media (min-width: 500px) {
+    body {
+        background-color: grey
+    }
+}
+
+@media (max-width: 499px) {
+    body {
+          background-color: blue;
+    }
+
+    h1 {
+        font-size:  14px;
+    }
+
+    h3 {
+        font-size:  12px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    table, th, td {
+        font-size: 10px;
+    }
+
+    ul, ol {
+        font-size: 10px;
+    }
+}
+
 h1 {
   color: red;
   text-align: center;
@@ -58,5 +90,5 @@ ol {
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 50px;
-  margin-bottom: 50 px;  
+  margin-bottom: 50 px;
 }
