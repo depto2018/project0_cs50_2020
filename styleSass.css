@@ -1,0 +1,83 @@
+div ul, div ol ul, #top, p, ol {
+  font-family: "Helvetica";
+  line-height: 1.5; }
+
+@media (min-width: 1101px) {
+  body {
+    background-color: grey; } }
+@media (max-width: 1100px) {
+  body {
+    background-color: blue; }
+
+  h1 {
+    font-size: 14px; }
+
+  h3 {
+    font-size: 12px; }
+
+  p {
+    font-size: 10px; }
+
+  table, th, td {
+    font-size: 10px; }
+
+  ul, ol {
+    font-size: 10px; } }
+div p {
+  color: black; }
+div ul {
+  color: red; }
+div ol ul {
+  color: black; }
+
+h1 {
+  color: red;
+  text-align: center;
+  font-family: "Helvetica"; }
+
+h3 {
+  color: blue;
+  text-align: left;
+  font-family: "Helvetica"; }
+
+#top {
+  font-size: 16px;
+  font-style: italic; }
+
+#middle {
+  font-weight: bold; }
+
+p {
+  color: black; }
+
+table, th, td {
+  font-family: "Helvetica";
+  font-size: 14px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 6px; }
+
+th {
+  background-color: #BFC9CA; }
+
+table {
+  margin-left: 10%; }
+
+.hero-image {
+  background-image: url("./images/back_image.jpg");
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.main_container {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 50 px; }
+
+img {
+  width: 12%; }
+
+/*# sourceMappingURL=styleSass.css.map */

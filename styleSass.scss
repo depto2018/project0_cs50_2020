@@ -1,0 +1,124 @@
+$font: "Helvetica";
+$spacing: 1.5;
+
+%message {
+  font-family: $font;
+  line-height: $spacing;
+}
+
+@media (min-width: 1101px) {
+    body {
+        background-color: grey;
+    }
+}
+
+@media (max-width: 1100px) {
+    body {
+          background-color: blue;
+    }
+
+    h1 {
+        font-size:  14px;
+    }
+
+    h3 {
+        font-size:  12px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    table, th, td {
+        font-size: 10px;
+    }
+
+    ul, ol {
+        font-size: 10px;
+    }
+}
+
+div {
+
+  p {
+    color: black;
+  }
+
+  ul{
+    @extend %message;
+    color: red;
+  }
+
+  ol ul{
+    @extend %message;
+    color: black;
+  }
+
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  font-family: $font;
+}
+
+h3 {
+  color: blue;
+  text-align: left;
+  font-family: $font;
+}
+
+#top {
+  @extend %message;
+  font-size: 16px;
+  font-style: italic;
+}
+
+#middle{
+  font-weight: bold;
+}
+
+p {
+  @extend %message;
+  color: black;
+}
+
+table, th, td {
+  font-family: $font;
+  font-size: 14px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 6px;
+}
+
+th {
+  background-color: #BFC9CA;
+}
+
+table{
+  margin-left: 10%;
+}
+
+ol {
+    @extend %message;
+}
+
+.hero-image {
+  background-image: url("./images/back_image.jpg");
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main_container{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 50 px;
+}
+
+img {
+  width: 12%;
+}

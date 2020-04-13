@@ -2,7 +2,7 @@
 <html>
       <head>
           <title>AWS by DEPT</title>
-          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="styleSass.css">
       </head>
 
       <body>
@@ -13,14 +13,21 @@
 
                 <h3>Something about myself...</h3>
 
-                <p>
-                  Hi all, my name is Diego, I am 30 years old and I have a bachelor's degree in electronics but most of my experience has been on networking and rigth now,
-                  I am an applications support engineer for NICE ltda. I am colombian and as most of people here, I love playing soccer and cycling as well. This is my
-                  first web page, I do not have any experience on web development but I am motivated to start digging into this field as I found it to be very interesting
-                  and would like to have a better understanding of how the front and backend integrates and the code in between. I want to use this first project to share
-                  some notes about AWS (Amazon Web Services) as I am following some courses about it as well. I am just taking advantage of my time at home while
-                  the pandemic hopefully is over. All the text I will put here is based on my personal understanding and opinion.
-                </p>
+                <div id="top">
+
+                    <span class="name">
+
+                      <img src="./images/withMom.jpg" align="right" hspace="10">Hi all, my name is Diego, I am 30 years old and I studied electronics but most of my experience has been on networking and rigth now,
+                      I am a remote applications support engineer for a company called NICE. I am colombian and as most of people here, I love playing soccer and cycling as well. This is my
+                      first web page, I do not have any experience on web development but I am motivated to start digging into this field as I found it to be very interesting
+                      and would like to have a better understanding of how the front and backend integrates and the code in between. I want to use this first project to share
+                      some notes about AWS (Amazon Web Services) as I am following some courses about it as well. I am just taking advantage of my time at home while
+                      the pandemic hopefully is over. All the text I will put here is based on my personal understanding and opinion. There you will a picture with my with my withMom
+                      the other day we went for a hicking close to our city.
+
+                    <span>
+
+                </div>
 
                 <h3>What is AWS?</h3>
 
@@ -33,9 +40,13 @@
                   efforts. Cloud computing eases the deployment of all resources for you.
                 </p>
 
-                <p>
-                  Big competitors of AWS nowadays are Google Cloud and Microsoft Azure. However, AWS is the actual lead on the market.
-                </p>
+                <div id="middle">
+                  <span class="name">
+                    <p>
+                      Big competitors of AWS nowadays are Google Cloud and Microsoft Azure. However, AWS is the actual lead on the market.
+                    </p>
+                  </span>
+                </div>
 
                 <h3>AWS infrastructure</h3>
 
@@ -84,16 +95,18 @@
                   </tr>
                 </table>
 
-                <h3>How do you decide which Region to choose?</h3>
+                <div>
+                    <h3>How do you decide which Region to choose?</h3>
 
-                <p>Important factors you need to take into account for choosing the correct region are the following:</p>
+                    <p>Important factors you need to take into account for choosing the correct region are the following:</p>
 
-                <ul>
-                    <li><strong>Latency:</strong> Closer to end users.</li>
-                    <li><strong>Cost:</strong> Every region may have different costs.</li>
-                    <li><strong>Compliance:</strong> Legal restrictions according to location policies.</li>
-                    <li><strong>Service availability:</strong> New services may run on specific regions only.</li>
-                </ul>
+                    <ul>
+                        <li><strong>Latency:</strong> Closer to end users.</li>
+                        <li><strong>Cost:</strong> Every region may have different costs.</li>
+                        <li><strong>Compliance:</strong> Legal restrictions according to location policies.</li>
+                        <li><strong>Service availability:</strong> New services may run on specific regions only.</li>
+                    </ul>
+                </div>
 
                 <h3>Want to know about AWS services and concepts?</h3>
 
@@ -102,7 +115,7 @@
                     <ul>
                       <li><a href="AWS_S3.html">AWS S3 (Simple Storage Service)</a></li>
                       <li><a href="AWS_EBS.html">AWS EBS (Elastic Block Store)</a>
-                      <li><a href="AWS_EFS.html">AWS EFS (Elastic File System)</a>
+                      <!--<li><a href="AWS_EFS.html">AWS EFS (Elastic File System)</a>-->
                       <li><a href="AWS_Glacier.html">AWS Glacier</a>
                     </ul>
                   <li><a href="AWS_VPC.html">AWS VPC (Virtual Private Cloud)</a></li>
