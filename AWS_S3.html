@@ -3,6 +3,11 @@
       <head>
             <title>AWS S3</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <style>
+                  .container-fluid {
+                    background-color: #e0e0e0;
+                  }
+            </style>
       </head>
       <body>
             <div class="container-fluid pt-12 my-3 bg-dark text-white">
@@ -11,117 +16,120 @@
 
             </div>
 
-            <div class="container">
+            <div class="container-fluid">
 
-                <h2 class="text-danger">What is AWS S3?</h2>
+                <div class="container">
 
-                <p>AWS S3 is an object (file) level storage service which can be used to save general purpose data on the cloud and access it from anywhere.
-                It can be seen as a NAS (Network Attached Storage) in an on-premise network. General features of AWS S3 are the following:</p>
+                    <h2 class="text-danger">What is AWS S3?</h2>
 
-                <ul>
-                    <li>Data is distributed across at least three AZs with the exception of One Zone-IA class S3 storage where the data is kept in one AZ only, which
-                    makes it a cheaper solution.</li>
-                    <li>It supports encryption.</li>
-                    <li>Provides automatic data classification. For example if data is not manipulated in any way during a certain period of time, it can be
-                    automatically moved to AWS Glacier for long term storage.</li>
-                    <li>Useful for big data analytics.</li>
-                </ul>
+                    <p>AWS S3 is an object (file) level storage service which can be used to save general purpose data on the cloud and access it from anywhere.
+                    It can be seen as a NAS (Network Attached Storage) in an on-premise network. General features of AWS S3 are the following:</p>
 
-                <h2 class="text-danger">Some AWS S3 concepts...</h2>
+                    <ul>
+                        <li>Data is distributed across at least three AZs with the exception of One Zone-IA class S3 storage where the data is kept in one AZ only, which
+                        makes it a cheaper solution.</li>
+                        <li>It supports encryption.</li>
+                        <li>Provides automatic data classification. For example if data is not manipulated in any way during a certain period of time, it can be
+                        automatically moved to AWS Glacier for long term storage.</li>
+                        <li>Useful for big data analytics.</li>
+                    </ul>
 
-                <h4 class="text-primary">Objects</h4>
+                    <h2 class="text-danger">Some AWS S3 concepts...</h2>
 
-                <p>AWS names files as objects. Each object is identified through an URL (Uniform Resource Locator) from which the object can be accessed.
-                  The following graph shows the structure of an object URL.</p>
+                    <h4 class="text-primary">Objects</h4>
 
-            </div>
+                    <p>AWS names files as objects. Each object is identified through an URL (Uniform Resource Locator) from which the object can be accessed.
+                      The following graph shows the structure of an object URL.</p>
 
-            <div class="container" style="margin-bottom:20px">
-                  <img src="./images/ObjectAWS_S3.png" class="img-fluid">
-            </div>
+                </div>
 
-            <div class="container">
+                <div class="col-12 mx-auto text-center" style="margin-bottom:20px">
+                      <img src="./images/ObjectAWS_S3.png" class="img-fluid">
+                </div>
 
-                <p>Objects in S3 have eventual consistency, which means that anytime an object is modified it will get replicated in all AZs but it might
-                  take some time as a difference with AWS EBS where objects are consistent.</p>
+                <div class="container">
 
-                <h4 class="text-primary">Buckets</h4>
+                    <p>Objects in S3 have eventual consistency, which means that anytime an object is modified it will get replicated in all AZs but it might
+                      take some time as a difference with AWS EBS where objects are consistent.</p>
 
-                <p>Buckets are basically containers to store the objects.</p>
+                    <h4 class="text-primary">Buckets</h4>
 
-                <h4 class="text-primary">REST</h4>
+                    <p>Buckets are basically containers to store the objects.</p>
 
-                <p>S3 is based on REST (Representational State Transfer) which is a system interface that maps HTTP methods to CRUD operations:</p>
+                    <h4 class="text-primary">REST</h4>
 
-                <ul>
-                    <li><strong>C</strong>reate &#8594; Put or Post operation.</li>
-                    <li><strong>R</strong>ead &#8594; Get operation.</li>
-                    <li><strong>U</strong>pdate &#8594; Post or Put operation.</li>
-                    <li><strong>D</strong>elete &#8594; Delete operation.</li>
-                </ul>
+                    <p>S3 is based on REST (Representational State Transfer) which is a system interface that maps HTTP methods to CRUD operations:</p>
 
-                <p><strong>Note:</strong> It is more common to use Put operation for create actions and Post for updates, but they can interchanged.</p>
+                    <ul>
+                        <li><strong>C</strong>reate &#8594; Put or Post operation.</li>
+                        <li><strong>R</strong>ead &#8594; Get operation.</li>
+                        <li><strong>U</strong>pdate &#8594; Post or Put operation.</li>
+                        <li><strong>D</strong>elete &#8594; Delete operation.</li>
+                    </ul>
 
-                <h2 class="text-danger">How to put data into S3?</h2>
+                    <p><strong>Note:</strong> It is more common to use Put operation for create actions and Post for updates, but they can interchanged.</p>
 
-                <p>There are different ways of getting data into S3 as follows:</p>
+                    <h2 class="text-danger">How to put data into S3?</h2>
 
-                <ul>
-                    <li>Uploading the files manually to an S3 bucket from your local desktop like the way you do with a storage cloud service like google drive
-                    or dropbox.</li>
-                    <li>Files can be uploaded through an API (Application Programming Interface).</li>
-                    <li>Amazon Direct Connect can be used to upload files through a VPN.</li>
-                    <li>An Storage Gateway can also be used to synchronize local data into AWS S3.</li>
-                    <li>Through Kinesis Firehose?</li>
-                    <li>Transfer acceleration and optimized data access can be done through AWS cloud front.</li>
-                </ul>
+                    <p>There are different ways of getting data into S3 as follows:</p>
 
-                <h2 class="text-danger">S3 storage classes</h2>
+                    <ul>
+                        <li>Uploading the files manually to an S3 bucket from your local desktop like the way you do with a storage cloud service like google drive
+                        or dropbox.</li>
+                        <li>Files can be uploaded through an API (Application Programming Interface).</li>
+                        <li>Amazon Direct Connect can be used to upload files through a VPN.</li>
+                        <li>An Storage Gateway can also be used to synchronize local data into AWS S3.</li>
+                        <li>Through Kinesis Firehose?</li>
+                        <li>Transfer acceleration and optimized data access can be done through AWS cloud front.</li>
+                    </ul>
 
-                <p>There are different types of storage classes which will offer more or less benefits with different cost chargings. Storage classes can be
-                  categorized as follows:</p>
+                    <h2 class="text-danger">S3 storage classes</h2>
 
-                <ol>
-                    <li><strong>General Purpose</strong></li>
-                        <ul>
-                            <li><strong>Standard:</strong> This is to store fequently accessed data with low latency and high throughput performance. Ideal for
-                            web applications, gaming, big data, etc.</li>
-                            <li><strong>Intelligent-tiering:</strong> This is for unkonwn or changing access. It automatically moves objects between two access tiers
-                            (Frequent and Infrequent tiers) based on changing access patterns.</li>
-                        </ul>
-                    <li><strong>Infrequent access (IA)</strong></li>
-                        <ul>
-                            <li><strong>Standard IA:</strong> This is for data that is accessed less frequently, but require rapid access if needed. Ideal solution
-                            for backups and disaster recovery data.</li>
-                            <li><strong>One Zone-IA:</strong> This class provides same features as standard-IA, but data is stored in one AZ only. In any of the
-                            other cases data is stored on a minimum of 3 AZs. Ideal for secondary backups or easily re-creatable data.</li>
-                        </ul>
-                    <li><strong>Archive</strong></li>
-                        <ul>
-                            <li><strong>Glacier:</strong> Low cost class for data archiving. It provides different retrieval options ranging form minutes to hours
-                            based on needs.</li>
-                            <li><strong>Glacier deep archive:</strong> Lowest cost storage class. It is designed for long-term retention data that will be
-                            retained for 7-10 years. Data can be retrieved within 12 hours.</li>
-                        </ul>
-                </ol>
+                    <p>There are different types of storage classes which will offer more or less benefits with different cost chargings. Storage classes can be
+                      categorized as follows:</p>
 
-                <p>Data can be moved from standard to either IA or Glacier based on time policies known as S3 Object Lifecycle Management. For further detailed
-                information, you can go to the AWS website: <a href="https://aws.amazon.com/s3/storage-classes/?nc=sn&loc=3"><u>AWS S3.</u></a> </p>
+                    <ol>
+                        <li><strong>General Purpose</strong></li>
+                            <ul>
+                                <li><strong>Standard:</strong> This is to store fequently accessed data with low latency and high throughput performance. Ideal for
+                                web applications, gaming, big data, etc.</li>
+                                <li><strong>Intelligent-tiering:</strong> This is for unkonwn or changing access. It automatically moves objects between two access tiers
+                                (Frequent and Infrequent tiers) based on changing access patterns.</li>
+                            </ul>
+                        <li><strong>Infrequent access (IA)</strong></li>
+                            <ul>
+                                <li><strong>Standard IA:</strong> This is for data that is accessed less frequently, but require rapid access if needed. Ideal solution
+                                for backups and disaster recovery data.</li>
+                                <li><strong>One Zone-IA:</strong> This class provides same features as standard-IA, but data is stored in one AZ only. In any of the
+                                other cases data is stored on a minimum of 3 AZs. Ideal for secondary backups or easily re-creatable data.</li>
+                            </ul>
+                        <li><strong>Archive</strong></li>
+                            <ul>
+                                <li><strong>Glacier:</strong> Low cost class for data archiving. It provides different retrieval options ranging form minutes to hours
+                                based on needs.</li>
+                                <li><strong>Glacier deep archive:</strong> Lowest cost storage class. It is designed for long-term retention data that will be
+                                retained for 7-10 years. Data can be retrieved within 12 hours.</li>
+                            </ul>
+                    </ol>
 
-                <h2 class="text-danger">Some S3 facts...</h2>
+                    <p>Data can be moved from standard to either IA or Glacier based on time policies known as S3 Object Lifecycle Management. For further detailed
+                    information, you can go to the AWS website: <a href="https://aws.amazon.com/s3/storage-classes/?nc=sn&loc=3"><u>AWS S3.</u></a> </p>
 
-                <ul class="list-unstyled">
-                    <li>&rArr;	A single object can be up to 5 TB in size.</li>
-                    <li>&rArr;	Bucket names must be globally unique.</li>
-                    <li>&rArr;	S3 classes can be configured at the object level and a single bucket may have objects stored in different classes.</li>
-                    <li>&rArr;	Objects versioning can be suspended but not Disabled.</li>
-                    <li>&rArr;	Objects inherit permissions from the bucket's but they can be overwritten at the object level.</li>
-                    <li>&rArr;	Tags are used to search, organize and manage object access. An object can have up to 10 tags.</li>
-                    <li>&rArr;	When you delete an object, it is only marked for deletion at first time so you can recover it. They get completed deleted after...</li>
-               </ul>
+                    <h2 class="text-danger">Some S3 facts...</h2>
 
-               <p class="text-right"><a href="index.html"><u>Return to main page</u></p>
+                    <ul class="list-unstyled">
+                        <li>&rArr;	A single object can be up to 5 TB in size.</li>
+                        <li>&rArr;	Bucket names must be globally unique.</li>
+                        <li>&rArr;	S3 classes can be configured at the object level and a single bucket may have objects stored in different classes.</li>
+                        <li>&rArr;	Objects versioning can be suspended but not Disabled.</li>
+                        <li>&rArr;	Objects inherit permissions from the bucket's but they can be overwritten at the object level.</li>
+                        <li>&rArr;	Tags are used to search, organize and manage object access. An object can have up to 10 tags.</li>
+                        <li>&rArr;	When you delete an object, it is only marked for deletion at first time so you can recover it. They get completed deleted after...</li>
+                   </ul>
 
+                   <p class="text-right"><a href="index.html"><u>Return to main page</u></p>
+
+                </div>
             </div>
      </body>
 </html>

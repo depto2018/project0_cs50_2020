@@ -3,6 +3,11 @@
       <head>
             <title>AWS EBS</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <style>
+                  .container-fluid {
+                    background-color: #e0e0e0;
+                  }
+            </style>
       </head>
 
       <body>
@@ -10,136 +15,139 @@
 
                 <h1 class="text-center">AWS EBS (Elastic Block Store)</h1>
 
-             </div>
-
-             <div class="container">
-                  <p class="text-justify">AWS EBS or Elastic Block Store is a block level storage for AWS services. Block storage allows for the creation of raw storage volumes which servers
-                    based operative system can connect to, a kind of hard drive. One important difference between object storage and block storage, is that the former can
-                    handle additional metadata like detailed information about the data files stored in the object. For example, in a video file you can include information
-                    about wheret he video was made, the type of camera used and subjects captured in each frame. Whereas in block storage metadata is limited to basic
-                    file attributes. That is why EBS volumes are used for persistent, durable and customizable block storage for EC2 instances. On the other hand, object
-                    level storage is used by AWS S3.</p>
-
-                  <p class="text-justify">EBS volumes are replicated within an AZ and can easily scale up to petabytes of data. AWS EBS provides the following two
-                    main volume types:</p>
-
-             </div>
-
-             <div class="container">
-               <div class="table-responsive">
-                  <table class="table table-striped">
-                      <thead>
-                         <tr>
-                            <th scope="col"></th>
-                            <th colspan="2" class="text-center">Solid State Drives (SSD)</th>
-                            <th colspan="2" class="text-center">Hard Disk Drives (HDD)</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                            <td scope="col">Volume Type</td>
-                            <td scope="col">EBS Provisioned IOPS SSD (io1)</td>
-                            <td scope="col">EBS General Purpose SSD (gp2)</td>
-                            <td scope="col">Throughput Optimized HDD (st1)</td>
-                            <td scope="col">Cold HDD (sc1)</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Short Description</th>
-                            <td scope="col">Highest performance SSD volume designed for latency-sensitive transactional workloads</td>
-                            <td scope="col">General Purpose SSD volume that balances price performance for a wide variety of transactional workloads</td>
-                            <td scope="col">Low cost HDD volume designed for frequently accessed, throughput intensive workloads</td>
-                            <td scope="col">Lowest cost HDD volume designed for less frequently accessed workloads</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Use Cases</td>
-                            <td scope="col">I/O-intensive NoSQL and relational databases</td>
-                            <td scope="col">Boot volumes, low-latency interactive apps, dev & test</td>
-                            <td scope="col">Big data, data warehouses, log processing</td>
-                            <td scope="col">Colder data requiring fewer scans per day</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">API name</td>
-                            <td scope="col">io1</td>
-                            <td scope="col">gp2</td>
-                            <td scope="col">st1</td>
-                            <td scope="col">sc1</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Volume Size</td>
-                            <td scope="col">4 GB - 16 TB</td>
-                            <td scope="col">1 GB - 16 TB</td>
-                            <td scope="col">500 GB - 16 TB</td>
-                            <td scope="col">500 GB - 16 TB</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Max IOPS/Volume</td>
-                            <td scope="col">64,000</td>
-                            <td scope="col">16,000</td>
-                            <td scope="col">500</td>
-                            <td scope="col">250</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Max Throughput/Volume</td>
-                            <td scope="col">1,000 MB/s</td>
-                            <td scope="col">250 MB/s</td>
-                            <td scope="col">500 MB/s</td>
-                            <td scope="col">250 MB/s</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Max IOPS/Instance</td>
-                            <td scope="col">80,000</td>
-                            <td scope="col">80,000</td>
-                            <td scope="col">80,000</td>
-                            <td scope="col">80,000</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Max Throughput/Instance</td>
-                            <td scope="col">2,375 MB/s</td>
-                            <td scope="col">2,375 MB/s</td>
-                            <td scope="col">2,375 MB/s</td>
-                            <td scope="col">2,375 MB/s</td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Price</td>
-                            <td scope="col">0.125/GB-month / $0.065/provisioned IOPS</td>
-                            <td scope="col">$0.10/GB-month</td>
-                            <td scope="col">$0.045/GB-month</td>
-                            <td scope="col">$0.025/GB-month/td>
-                        </tr>
-                        <tr>
-                            <td scope="col">Domminant Performance Attribute</td>
-                            <td scope="col">IOPS</td>
-                            <td scope="col">IOPS</td>
-                            <td scope="col">MB/s</td>
-                            <td scope="col">MB/s</td>
-                        </tr>
-                    </tbody>
-                  </table>
-                </div>
             </div>
 
-            <div class="container">
+            <div class="container-fluid">
 
-                <p class="font-italic">IOPS: Input/output Operations per Second</p>
-                <p class="font-italic">General Purpose SSD (gp2) is the default volume for EC2 instances.</p>
-                <p class="font-italic">To maximize the performance of any EBS volume, AWS recommends to use EBS-Optimized EC2 instances.</p>
+                     <div class="container">
+                          <p class="text-justify">AWS EBS or Elastic Block Store is a block level storage for AWS services. Block storage allows for the creation of raw storage volumes which servers
+                            based operative system can connect to, a kind of hard drive. One important difference between object storage and block storage, is that the former can
+                            handle additional metadata like detailed information about the data files stored in the object. For example, in a video file you can include information
+                            about wheret he video was made, the type of camera used and subjects captured in each frame. Whereas in block storage metadata is limited to basic
+                            file attributes. That is why EBS volumes are used for persistent, durable and customizable block storage for EC2 instances. On the other hand, object
+                            level storage is used by AWS S3.</p>
 
-                <h2 class="text-danger">Some AWS EBS facts...</h2>
+                          <p class="text-justify">EBS volumes are replicated within an AZ and can easily scale up to petabytes of data. AWS EBS provides the following two
+                            main volume types:</p>
 
-                <ul>
-                    <li>The Amazon data lifecycle manager can be used to automate the process of taking EBS snapshots according to user defined policies.</li>
-                    <li>EBS volumes are elastic which means, anytime the user may increase capacity, tune performance and change the type of any volume with
-                    no downtime or impact.</li>
-                    <li>EBS volumes and snpashots can be encrypted with general or user created keys.</li>
-                    <li>Amazon EBS Multi-Attach allows an EBS io1 volume to be attached concurrently to up to 16 Nitro-based EC2 insatnces within the same AZ.</li>
-                    <li>EC2 instances and EBS volumes need to be on the same AZ.</li>
-               </ul>
+                     </div>
 
-               <p>AWS provides a bunch of features in regards to the way snapshots can be used and managed, for additonal details about it please visit the
-                 AWS EBS oage at the following link: <a href="https://aws.amazon.com/ebs/features/"><u>AWS EBS</u><a></p>
+                     <div class="container">
+                       <div class="table-responsive">
+                          <table class="table table-striped">
+                              <thead>
+                                 <tr>
+                                    <th scope="col"></th>
+                                    <th colspan="2" class="text-center">Solid State Drives (SSD)</th>
+                                    <th colspan="2" class="text-center">Hard Disk Drives (HDD)</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <tr>
+                                    <td scope="col">Volume Type</td>
+                                    <td scope="col">EBS Provisioned IOPS SSD (io1)</td>
+                                    <td scope="col">EBS General Purpose SSD (gp2)</td>
+                                    <td scope="col">Throughput Optimized HDD (st1)</td>
+                                    <td scope="col">Cold HDD (sc1)</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Short Description</th>
+                                    <td scope="col">Highest performance SSD volume designed for latency-sensitive transactional workloads</td>
+                                    <td scope="col">General Purpose SSD volume that balances price performance for a wide variety of transactional workloads</td>
+                                    <td scope="col">Low cost HDD volume designed for frequently accessed, throughput intensive workloads</td>
+                                    <td scope="col">Lowest cost HDD volume designed for less frequently accessed workloads</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Use Cases</td>
+                                    <td scope="col">I/O-intensive NoSQL and relational databases</td>
+                                    <td scope="col">Boot volumes, low-latency interactive apps, dev & test</td>
+                                    <td scope="col">Big data, data warehouses, log processing</td>
+                                    <td scope="col">Colder data requiring fewer scans per day</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">API name</td>
+                                    <td scope="col">io1</td>
+                                    <td scope="col">gp2</td>
+                                    <td scope="col">st1</td>
+                                    <td scope="col">sc1</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Volume Size</td>
+                                    <td scope="col">4 GB - 16 TB</td>
+                                    <td scope="col">1 GB - 16 TB</td>
+                                    <td scope="col">500 GB - 16 TB</td>
+                                    <td scope="col">500 GB - 16 TB</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Max IOPS/Volume</td>
+                                    <td scope="col">64,000</td>
+                                    <td scope="col">16,000</td>
+                                    <td scope="col">500</td>
+                                    <td scope="col">250</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Max Throughput/Volume</td>
+                                    <td scope="col">1,000 MB/s</td>
+                                    <td scope="col">250 MB/s</td>
+                                    <td scope="col">500 MB/s</td>
+                                    <td scope="col">250 MB/s</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Max IOPS/Instance</td>
+                                    <td scope="col">80,000</td>
+                                    <td scope="col">80,000</td>
+                                    <td scope="col">80,000</td>
+                                    <td scope="col">80,000</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Max Throughput/Instance</td>
+                                    <td scope="col">2,375 MB/s</td>
+                                    <td scope="col">2,375 MB/s</td>
+                                    <td scope="col">2,375 MB/s</td>
+                                    <td scope="col">2,375 MB/s</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Price</td>
+                                    <td scope="col">0.125/GB-month / $0.065/provisioned IOPS</td>
+                                    <td scope="col">$0.10/GB-month</td>
+                                    <td scope="col">$0.045/GB-month</td>
+                                    <td scope="col">$0.025/GB-month/td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">Domminant Performance Attribute</td>
+                                    <td scope="col">IOPS</td>
+                                    <td scope="col">IOPS</td>
+                                    <td scope="col">MB/s</td>
+                                    <td scope="col">MB/s</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
 
-              <p class="text-right"><a href="index.html"><u>Return to main page</u></p>
+                    <div class="container">
 
-          </div>
+                        <p class="font-italic">IOPS: Input/output Operations per Second</p>
+                        <p class="font-italic">General Purpose SSD (gp2) is the default volume for EC2 instances.</p>
+                        <p class="font-italic">To maximize the performance of any EBS volume, AWS recommends to use EBS-Optimized EC2 instances.</p>
+
+                        <h2 class="text-danger">Some AWS EBS facts...</h2>
+
+                        <ul>
+                            <li>The Amazon data lifecycle manager can be used to automate the process of taking EBS snapshots according to user defined policies.</li>
+                            <li>EBS volumes are elastic which means, anytime the user may increase capacity, tune performance and change the type of any volume with
+                            no downtime or impact.</li>
+                            <li>EBS volumes and snpashots can be encrypted with general or user created keys.</li>
+                            <li>Amazon EBS Multi-Attach allows an EBS io1 volume to be attached concurrently to up to 16 Nitro-based EC2 insatnces within the same AZ.</li>
+                            <li>EC2 instances and EBS volumes need to be on the same AZ.</li>
+                       </ul>
+
+                       <p>AWS provides a bunch of features in regards to the way snapshots can be used and managed, for additonal details about it please visit the
+                         AWS EBS oage at the following link: <a href="https://aws.amazon.com/ebs/features/"><u>AWS EBS</u><a></p>
+
+                      <p class="text-right"><a href="index.html"><u>Return to main page</u></p>
+
+                  </div>
+            </div>
       </body>
 </html>
