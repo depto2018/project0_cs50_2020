@@ -11,7 +11,7 @@ $spacing: 1.5;
         background-color: grey;
     }
     img {
-        width: 12%;
+        width: 80%;
     }
     .main_container{
       margin-left: 50px;
@@ -46,7 +46,7 @@ $spacing: 1.5;
         font-size: 8px;
     }
     img {
-      width: 30%;
+      width: 80%;
     }
     .main_container{
       margin-left: 10px;
@@ -126,4 +126,13 @@ ol {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.grid-item {
+    text-align: justify;
 }
