@@ -28,13 +28,13 @@ div ul, div ol ul, #top, p, ol {
     font-size: 8px; }
 
   table, th, td {
-    font-size: 10px; }
+    font-size: 8px; }
 
   ul, ol {
-    font-size: 10px; }
+    font-size: 8px; }
 
   img {
-    width: 40%; }
+    width: 30%; }
 
   .main_container {
     margin-left: 20px;
@@ -69,7 +69,6 @@ p {
 
 table, th, td {
   font-family: "Helvetica";
-  font-size: 14px;
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
