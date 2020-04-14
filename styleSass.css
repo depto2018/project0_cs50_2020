@@ -7,7 +7,7 @@ div ul, div ol ul, #top, p, ol {
     background-color: grey; }
 
   img {
-    width: 80%; }
+    width: 50%; }
 
   .main_container {
     margin-left: 50px;
@@ -92,6 +92,6 @@ table {
   grid-template-columns: 70% 30%; }
 
 .grid-item {
-  text-align: justify; }
+  text-align: center; }
 
 /*# sourceMappingURL=styleSass.css.map */
