@@ -69,7 +69,7 @@
                         <li><strong>D</strong>elete &#8594; Delete operation.</li>
                     </ul>
 
-                    <p><strong>Note:</strong> It is more common to use Put operation for create actions and Post for updates, but they can interchanged.</p>
+                    <p><strong>Note:</strong> It is more common to use Put operations for create actions and Post for update actions, but they can be interchanged.</p>
 
                     <h2 class="text-danger">How to put data into S3?</h2>
 
@@ -87,7 +87,7 @@
 
                     <h2 class="text-danger">S3 storage classes</h2>
 
-                    <p>There are different types of storage classes which will offer more or less benefits with different cost chargings. Storage classes can be
+                    <p>There are different types of storage classes which will offer you more or less benefits with different cost chargings. Storage classes can be
                       categorized as follows:</p>
 
                     <ol>
@@ -107,8 +107,8 @@
                             </ul>
                         <li><strong>Archive</strong></li>
                             <ul>
-                                <li><strong>Glacier:</strong> Low cost class for data archiving. It provides different retrieval options ranging form minutes to hours
-                                based on needs.</li>
+                                <li><strong>Glacier:</strong> Low cost class for data archiving. It provides different retrieval options ranging from minutes to hours
+                                based on customer needs.</li>
                                 <li><strong>Glacier deep archive:</strong> Lowest cost storage class. It is designed for long-term retention data that will be
                                 retained for 7-10 years. Data can be retrieved within 12 hours.</li>
                             </ul>
@@ -122,11 +122,11 @@
                     <ul class="list-unstyled">
                         <li>&rArr;	A single object can be up to 5 TB in size.</li>
                         <li>&rArr;	Bucket names must be globally unique.</li>
-                        <li>&rArr;	S3 classes can be configured at the object level and a single bucket may have objects stored in different classes.</li>
+                        <li>&rArr;	S3 classes can be configured at the object level and a single bucket may have objects stored using different classes.</li>
                         <li>&rArr;	Objects versioning can be suspended but not Disabled.</li>
                         <li>&rArr;	Objects inherit permissions from the bucket's but they can be overwritten at the object level.</li>
                         <li>&rArr;	Tags are used to search, organize and manage object access. An object can have up to 10 tags.</li>
-                        <li>&rArr;	When you delete an object, it is only marked for deletion at first time so you can recover it. They get completed deleted after...</li>
+                        <li>&rArr;	When you delete an object, it is only marked for deletion at first time so you can recover it later.</li>
                    </ul>
 
                    <p class="text-right"><a href="index.html"><u>Return to main page</u></p>
